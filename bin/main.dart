@@ -1,9 +1,16 @@
 import 'dart:io';
 
 void main() {
-  print("=== Program Operasi Bilangan ===");
-  stdout.write("Masukkan sebuah angka: ");
+  stdout.write("Masukkan angka: ");
   int angka = int.parse(stdin.readLineSync()!);
 
-  print("Angka yang dimasukkan adalah $angka");
+  stdout.write("Masukkan pangkat: ");
+  int pangkat = int.parse(stdin.readLineSync()!);
+
+  int hasil = 1;
+  for (int i = 0; i < pangkat; i++) {
+    hasil *= angka;
+  }
+
+  print("$angka pangkat $pangkat = $hasil");
 }
